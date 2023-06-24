@@ -20,3 +20,16 @@ CREATE TABLE notas(
     calificacion INT,
     FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id_estudiante)
 );
+
+--COMANDOS DDL (DATA DEFINITION LANGUAJE)
+--es un conjunto de comandos SQL para definir el esquema de la base de datos. Se trata simplemente 
+--de descripciones del esquema de la base de datos y se utiliza para crear y modificar la estructura 
+--de los objetos de la base de datos
+
+--Agregar columnas
+ALTER TABLE estudiantes ADD COLUMN email VARCHAR(100);
+--Modificar el tipo de dato de una columna
+ALTER TABLE notas MODIFY COLUMN calificacion FLOAT;
+--Eliminar una tabla
+DROP TABLE notas;
+
