@@ -11,3 +11,12 @@ CREATE TABLE estudiantes(
     apellido VARCHAR(50),
     edad INT
 );
+--Crearemos otra tabla, donde veremos relacion con la tabla de estudiantes, que se lleva acabo
+--con una llave foranea
+CREATE TABLE notas(
+    id_nota INT PRIMARY KEY AUTO_INCREMENT,
+    id_estudiante INT,
+    asignatura VARCHAR(50),
+    calificacion INT,
+    FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id_estudiante)
+);
